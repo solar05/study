@@ -13,7 +13,7 @@ module Exercise
       def search(array, element)
         length = array.length
         if length < 2
-          return array.index(element).nil? ? -1 : array.index(element)
+          return array.include?(element) ? 0 : -1
         end
 
         binary(array, 0, length, element)
